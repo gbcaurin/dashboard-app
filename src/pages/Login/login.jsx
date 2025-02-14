@@ -18,14 +18,14 @@ function Login() {
               <label htmlFor="password">Senha</label>
             </div>
             <button type="submit" className={styles.submitButton}>
-              Login
+              Acessar minha conta
             </button>
           </form>
         </div>
         <div className={styles.textContainer}>
-          <h3 className={styles.text}>Não possui conta? Faça o</h3>
+          <h3 className={styles.text}>Não possui conta? </h3>
           <a href="/signUp" className={styles.link}>
-            Sign Up
+            Cadastre-se
           </a>
         </div>
       </div>

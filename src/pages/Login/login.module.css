@@ -16,6 +16,7 @@
 .formContainer {
   width: 100%;
   max-width: 450px;
+  max-height: 600px;
   padding: 20px;
   background-color: #232323;
   border-radius: 10px;
@@ -78,7 +79,7 @@
   color: #fff;
   font-size: 16px;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -114,4 +115,32 @@
   color: red;
   font-size: 14px;
   margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 15px;
+  }
+
+  .formHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .formHeader img {
+    max-width: 200px; /* Limita a largura da imagem */
+    width: 100%; /* Faz com que a imagem ocupe 100% da largura do contêiner, mas respeitando o max-width */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+
+  .submitButton {
+    font-size: 14px;
+  }
+
+  .inputGroup input {
+    font-size: 14px;
+    padding: 8px;
+  }
 }

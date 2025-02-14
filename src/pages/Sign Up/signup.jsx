@@ -26,7 +26,7 @@ function SignUp() {
               <label htmlFor="confirmPassword">Confirmar Senha</label>
             </div>
             <button type="submit" className={styles.submitButton}>
-              Sign Up
+              Criar conta
             </button>
           </form>
         </div>
