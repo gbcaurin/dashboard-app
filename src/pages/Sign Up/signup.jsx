@@ -32,7 +32,7 @@ function SignUp() {
         </div>
         <div className={styles.textContainer}>
           <h3 className={styles.text}>Já possui conta? Faça o</h3>
-          <a href="/login" className={styles.link}>
+          <a href="/" className={styles.link}>
             Login
           </a>
         </div>
