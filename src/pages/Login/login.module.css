@@ -118,12 +118,6 @@
   text-decoration: underline;
 }
 
-.error {
-  color: red;
-  font-size: 14px;
-  margin-top: 10px;
-}
-
 @media (max-width: 768px) {
   .formContainer {
     padding: 15px;
@@ -137,9 +131,9 @@
   }
 
   .formHeader img {
-    max-width: 200px; /* Limita a largura da imagem */
-    width: 100%; /* Faz com que a imagem ocupe 100% da largura do contêiner, mas respeitando o max-width */
-    height: auto; /* Mantém a proporção da imagem */
+    max-width: 200px;
+    width: 100%;
+    height: auto;
   }
 
   .submitButton {

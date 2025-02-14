@@ -44,7 +44,7 @@ function Login() {
               value={password}
               autoComplete="off"
               onChange={(e) => setPassword(e.target.value)}
-              placeholder=" "
+              placeholder=""
             />
             <label htmlFor="password">Senha</label>
           </div>
