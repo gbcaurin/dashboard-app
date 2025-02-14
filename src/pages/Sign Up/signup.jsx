@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { auth } from "../../firebaseConfig";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import PopUpMsg from "../../components/PopUpMsg/popUpMsg"; // Import PopUpMsg
 import styles from "./signup.module.css";
 
 function SignUp() {
@@ -9,6 +10,8 @@ function SignUp() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [name, setName] = useState("");
   const [error, setError] = useState(null);
+  const [message, setMessage] = useState("");
+  const [msgType, setMsgType] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,11 +32,21 @@ function SignUp() {
         displayName: name,
       });
 
-      alert("Usuário criado com sucesso!");
-      window.location.href = "/";
+      setMessage("Usuário criado com sucesso! Redirecionando...");
+      setMsgType("success");
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 3000);
     } catch (error) {
       setError(error.message);
+      setMessage(error.message);
+      setMsgType("error");
     }
+  };
+
+  const handleClose = () => {
+    setMessage("");
+    setMsgType("");
   };
 
   return (
@@ -99,6 +112,9 @@ function SignUp() {
           Login
         </a>
       </div>
+      {message && (
+        <PopUpMsg message={message} type={msgType} onClose={handleClose} />
+      )}
     </div>
   );
 }

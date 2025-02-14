@@ -1,22 +1,36 @@
 import { useState } from "react";
 import { auth, signInWithEmailAndPassword } from "../../firebaseConfig";
+import PopUpMsg from "../../components/PopUpMsg/popUpMsg";
 import styles from "./login.module.css";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const [message, setMessage] = useState(""); // State for PopUpMsg
+  const [msgType, setMsgType] = useState(""); // State for message type
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      alert("Logado com sucesso!");
-      window.location.href = "/dashboard";
+      setMessage("Logado com sucesso! Redirecionando...");
+      setMsgType("success");
+
+      setTimeout(() => {
+        window.location.href = "/dashboard";
+      }, 3000);
     } catch (error) {
       setError(error.message);
+      setMessage(error.message);
+      setMsgType("error");
     }
+  };
+
+  const handleClose = () => {
+    setMessage("");
+    setMsgType("");
   };
 
   return (
@@ -60,6 +74,9 @@ function Login() {
           Cadastre-se
         </a>
       </div>
+      {message && (
+        <PopUpMsg message={message} type={msgType} onClose={handleClose} />
+      )}
     </div>
   );
 }

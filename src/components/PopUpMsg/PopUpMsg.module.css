@@ -1,0 +1,42 @@
+.popupContainer {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: auto;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  background-color: #232323;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.success {
+  border-left: 5px solid green;
+  border-top: 1px solid green;
+  border-bottom: 1px solid green;
+  border-right: 1px solid green;
+}
+
+.error {
+  border-left: 5px solid red;
+  border-top: 1px solid red;
+  border-bottom: 1px solid red;
+  border-right: 1px solid red;
+}
+
+.info {
+  border-left: 5px solid blue;
+  border-top: 1px solid blue;
+  border-bottom: 1px solid blue;
+  border-right: 1px solid blue;
+}
