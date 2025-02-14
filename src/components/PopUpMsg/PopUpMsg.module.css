@@ -40,3 +40,14 @@
   border-bottom: 1px solid blue;
   border-right: 1px solid blue;
 }
+
+@media (max-width: 768px) {
+  .popupContainer {
+    left: 10px;
+    right: 10px;
+  }
+
+  .popup {
+    padding: 8px;
+  }
+}

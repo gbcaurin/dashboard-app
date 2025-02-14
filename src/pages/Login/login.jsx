@@ -7,8 +7,8 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
-  const [message, setMessage] = useState(""); // State for PopUpMsg
-  const [msgType, setMsgType] = useState(""); // State for message type
+  const [message, setMessage] = useState("");
+  const [msgType, setMsgType] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();

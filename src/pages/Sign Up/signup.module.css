@@ -116,3 +116,31 @@
 .link:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 15px;
+  }
+
+  .formHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .formHeader img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+  }
+
+  .submitButton {
+    font-size: 14px;
+  }
+
+  .inputGroup input {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
