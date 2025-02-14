@@ -33,6 +33,7 @@ function Login() {
               value={email}
               autoComplete="off"
               onChange={(e) => setEmail(e.target.value)}
+              placeholder=" "
             />
             <label htmlFor="email">E-mail</label>
           </div>
@@ -43,6 +44,7 @@ function Login() {
               value={password}
               autoComplete="off"
               onChange={(e) => setPassword(e.target.value)}
+              placeholder=" "
             />
             <label htmlFor="password">Senha</label>
           </div>

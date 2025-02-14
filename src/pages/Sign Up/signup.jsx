@@ -50,6 +50,7 @@ function SignUp() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               autoComplete="off"
+              placeholder=" "
             />
             <label htmlFor="name">Nome</label>
           </div>
@@ -60,6 +61,7 @@ function SignUp() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               autoComplete="off"
+              placeholder=" "
             />
             <label htmlFor="email">E-mail</label>
           </div>
@@ -70,6 +72,7 @@ function SignUp() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               autoComplete="off"
+              placeholder=" "
             />
             <label htmlFor="password">Senha</label>
           </div>
@@ -80,6 +83,7 @@ function SignUp() {
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
               autoComplete="off"
+              placeholder=" "
             />
             <label htmlFor="confirmPassword">Confirmar Senha</label>
           </div>
