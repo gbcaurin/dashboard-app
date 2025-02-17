@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { auth } from "../../firebaseConfig";
 import { useNavigate } from "react-router-dom";
 import styles from "./dashboard.module.css";
+import { PulseLoader } from "react-spinners";
 
 function Dashboard() {
   const [user, setUser] = useState(null);
@@ -18,7 +19,11 @@ function Dashboard() {
   }, []);
 
   if (loading) {
-    return <h2>Carregando...</h2>;
+    return (
+      <div className={styles.loading}>
+        <PulseLoader color="#000" size={15} />
+      </div>
+    );
   }
 
   if (!user) {

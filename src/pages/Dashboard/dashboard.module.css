@@ -28,3 +28,10 @@
   color: #fff;
   border: 1px solid #fff;
 }
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
