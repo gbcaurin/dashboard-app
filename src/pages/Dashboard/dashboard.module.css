@@ -14,19 +14,18 @@
 }
 
 .buttonUnlogged {
-  background-color: #fff;
-  color: #232323;
+  background-color: #232323;
+  color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
-  border: none;
+  border: 1px solid #fff;
 }
 
 .buttonUnlogged:hover {
-  background-color: #232323;
-  color: #fff;
-  border: 1px solid #fff;
+  background-color: #fff;
+  color: #232323;
 }
 
 .loading {
