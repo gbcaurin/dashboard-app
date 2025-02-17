@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import styles from "./dashboard.module.css";
 import { PulseLoader } from "react-spinners";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import Navbar from "../../components/Navbar/Navbar";
 
 function Dashboard() {
   const [user, setUser] = useState(null);
@@ -48,12 +47,10 @@ function Dashboard() {
     <>
       <div className={styles.container}>
         <Sidebar user={user} />
-        <div className={styles.mainCotent}>
-          <Navbar user={user} />
-          <h1>Visão Geral</h1>
-          <div>
-            <h3>TESTE</h3>
-          </div>
+        <div className={styles.mainContent}>
+          <h1 className={styles.text}>
+            Bem-vindo, {user.displayName || "Usuário"}!
+          </h1>
         </div>
       </div>
     </>
