@@ -14,6 +14,7 @@ function Sidebar() {
   // Função para alternar o estado da sidebar
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
+    ontoggle(!isOpen);
   };
 
   return (

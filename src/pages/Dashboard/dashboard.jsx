@@ -4,10 +4,33 @@ import { useNavigate } from "react-router-dom";
 import styles from "./dashboard.module.css";
 import { PulseLoader } from "react-spinners";
 import Sidebar from "../../components/Sidebar/Sidebar";
+import { Bar } from "react-chartjs-2";
+import { getSalesData } from "../../dataService";
+
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 function Dashboard() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [salesData, setSalesData] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -18,6 +41,31 @@ function Dashboard() {
 
     return () => unsubscribe();
   }, []);
+
+  useEffect(() => {
+    const fetchSalesData = async () => {
+      const data = await getSalesData();
+      setSalesData(data);
+    };
+
+    fetchSalesData();
+  }, []);
+
+  const totalSales =
+    salesData?.data.reduce((total, item) => total + item.vendas, 0) || 0;
+  const totalOrders =
+    salesData?.data.reduce((total, item) => total + item.pedidos, 0) || 0;
+
+  const data = {
+    labels: salesData?.labels || [],
+    datasets: [
+      {
+        label: "Vendas",
+        data: salesData?.data.map((monthData) => monthData.vendas) || [],
+        backgroundColor: "rgba(75, 192, 192, 0.6)",
+      },
+    ],
+  };
 
   if (loading) {
     return (
@@ -46,11 +94,39 @@ function Dashboard() {
   return (
     <>
       <div className={styles.container}>
-        <Sidebar user={user} />
-        <div className={styles.mainContent}>
+        <Sidebar onToggle={setIsSidebarOpen} />
+        <div
+          className={`${styles.mainContent} ${
+            isSidebarOpen ? styles.contentWithSidebar : styles.contentFull
+          }`}
+        >
           <h1 className={styles.text}>
-            Bem-vindo, {user.displayName || "Usuário"}!
+            Boas-vindas, {user.displayName || "Usuário"}
           </h1>
+
+          <div className={styles.filters}>
+            <select className={styles.filterSelect}>
+              <option value="all">Todos os Dados</option>
+              <option value="today">Hoje</option>
+              <option value="week">Esta Semana</option>
+              <option value="month">Este Mês</option>
+            </select>
+          </div>
+
+          <div className={styles.stats}>
+            <div className={styles.statCard}>
+              <h3 className={styles.statTitle}>Total de Vendas</h3>
+              <p className={styles.statValue}>R$ {totalSales.toFixed(2)}</p>
+            </div>
+            <div className={styles.statCard}>
+              <h3 className={styles.statTitle}>Total de Pedidos</h3>
+              <p className={styles.statValue}>{totalOrders}</p>
+            </div>
+            <div className={styles.graphContainer}>
+              <h3 className={styles.graphTitle}>Vendas Mensais</h3>
+              <Bar data={data} />
+            </div>
+          </div>
         </div>
       </div>
     </>
