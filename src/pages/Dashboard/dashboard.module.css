@@ -1,0 +1,30 @@
+.containerUnlogged {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #232323;
+}
+
+.titleUnlogged {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.buttonUnlogged {
+  background-color: #fff;
+  color: #232323;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+}
+
+.buttonUnlogged:hover {
+  background-color: #232323;
+  color: #fff;
+  border: 1px solid #fff;
+}
