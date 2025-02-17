@@ -35,3 +35,15 @@
   align-items: center;
   height: 100vh;
 }
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 20px;
+  background-color: #232323;
+  color: white;
+}
