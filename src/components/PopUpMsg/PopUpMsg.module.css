@@ -1,7 +1,7 @@
 .popupContainer {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
+  top: 20px;
+  right: 20px;
   width: auto;
   max-width: 300px;
   display: flex;
