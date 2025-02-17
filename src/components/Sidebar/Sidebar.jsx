@@ -7,9 +7,9 @@ import { BiMenuAltLeft } from "react-icons/bi";
 import { BiMenu } from "react-icons/bi";
 import { ImExit } from "react-icons/im";
 
-function Sidebar({ user }) {
+function Sidebar() {
   // Estado para controlar se a sidebar está aberta ou fechada
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   // Função para alternar o estado da sidebar
   const toggleSidebar = () => {
@@ -26,9 +26,11 @@ function Sidebar({ user }) {
 
       {isOpen && (
         <div className={styles.menu}>
-          <h2 className={styles.title}>
-            Bem-vindo, {user?.displayName || "Usuário"}
-          </h2>
+          <img
+            src="/images/Rectangular_Logo.png"
+            alt="Logo"
+            className={styles.logo}
+          />
           <ul className={styles.list}>
             <li className={styles.item}>
               <Link to="/dashboard">Visão Geral</Link>

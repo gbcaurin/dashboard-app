@@ -16,6 +16,10 @@
   margin-bottom: 20px;
 }
 
+.logo {
+  width: 100%;
+}
+
 .list {
   list-style-type: none;
   padding: 0;
@@ -83,7 +87,8 @@
 }
 
 .menu {
-  padding-top: 50px;
+  padding-top: 20px;
+  width: 100%;
 }
 
 ul {
