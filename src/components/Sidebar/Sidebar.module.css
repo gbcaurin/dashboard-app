@@ -123,6 +123,11 @@ li {
     top: 10px;
     left: 10px;
   }
+
+  .itemLogout {
+    bottom: 40px;
+    left: 40px;
+  }
 }
 
 @media screen and (max-width: 768px) {
