@@ -6,13 +6,13 @@ import {
 } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.NEXT_PUBLIC_API_KEY,
-  authDomain: import.meta.env.NEXT_PUBLIC_AUTH_DOMAIN,
-  projectId: import.meta.env.NEXT_PUBLIC_PROJECT_ID,
-  storageBucket: import.meta.env.NEXT_PUBLIC_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
-  appId: import.meta.env.NEXT_PUBLIC_APP_ID,
-  measurementId: import.meta.env.NEXT_PUBLIC_MEASUREMENT_ID,
+  apiKey: "AIzaSyDHL6xjLLPMmERz2Btc0UGJeUQOlmMTMHE",
+  authDomain: "dashboardgc-12019.firebaseapp.com",
+  projectId: "dashboardgc-12019",
+  storageBucket: "dashboardgc-12019.firebasestorage.app",
+  messagingSenderId: "114252750723",
+  appId: "1:114252750723:web:4cf8d6dc5b0765bd20a0b6",
+  measurementId: "G-VL2YG0B648",
 };
 
 const app = initializeApp(firebaseConfig);
