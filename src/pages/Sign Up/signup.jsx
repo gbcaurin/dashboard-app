@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { auth } from "../../firebaseConfig";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import PopUpMsg from "../../components/PopUpMsg/popUpMsg";
+import PopUpMsg from "../../components/PopUpMsg/PopUpMsg";
 import styles from "./signup.module.css";
 
 function SignUp() {
