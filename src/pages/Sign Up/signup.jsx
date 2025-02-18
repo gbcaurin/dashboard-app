@@ -3,6 +3,7 @@ import { auth } from "../../firebaseConfig";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import PopUpMsg from "../../components/PopUpMsg/PopUpMsg";
 import styles from "./signup.module.css";
+import { useNavigate } from "react-router-dom";
 
 function SignUp() {
   const [email, setEmail] = useState("");
@@ -12,6 +13,7 @@ function SignUp() {
   const [error, setError] = useState(null);
   const [message, setMessage] = useState("");
   const [msgType, setMsgType] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -35,7 +37,7 @@ function SignUp() {
       setMessage("Usuário criado com sucesso! Redirecionando...");
       setMsgType("success");
       setTimeout(() => {
-        window.location.href = "/";
+        navigate("/");
       }, 3000);
     } catch (error) {
       setError(error.message);

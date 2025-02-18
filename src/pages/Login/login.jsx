@@ -2,12 +2,14 @@ import { useState } from "react";
 import { auth, signInWithEmailAndPassword } from "../../firebaseConfig";
 import PopUpMsg from "../../components/PopUpMsg/PopUpMsg";
 import styles from "./login.module.css";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const [msgType, setMsgType] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,7 +20,7 @@ function Login() {
       setMsgType("success");
 
       setTimeout(() => {
-        window.location.href = "/dashboard";
+        navigate("/dashboard");
       }, 3000);
     } catch (error) {
       setMessage(error.message);
