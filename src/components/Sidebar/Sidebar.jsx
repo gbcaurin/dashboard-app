@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { auth } from "../../firebaseConfig";
 import PropTypes from "prop-types";
-import styles from "./sidebar.module.css";
+import styles from "./Sidebar.module.css";
 import { BiMenuAltLeft } from "react-icons/bi";
 import { BiMenu } from "react-icons/bi";
 import { ImExit } from "react-icons/im";
