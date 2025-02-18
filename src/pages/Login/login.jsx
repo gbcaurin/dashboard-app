@@ -6,7 +6,6 @@ import styles from "./login.module.css";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(null);
   const [message, setMessage] = useState("");
   const [msgType, setMsgType] = useState("");
 
@@ -22,7 +21,6 @@ function Login() {
         window.location.href = "/dashboard";
       }, 3000);
     } catch (error) {
-      setError(error.message);
       setMessage(error.message);
       setMsgType("error");
     }
@@ -62,7 +60,6 @@ function Login() {
             />
             <label htmlFor="password">Senha</label>
           </div>
-          {error && <p className={styles.error}>{error}</p>}
           <button type="submit" className={styles.submitButton}>
             Acessar minha conta
           </button>
