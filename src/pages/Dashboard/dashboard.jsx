@@ -104,15 +104,6 @@ function Dashboard() {
             Boas-vindas, {user.displayName || "Usuário"}
           </h1>
 
-          <div className={styles.filters}>
-            <select className={styles.filterSelect}>
-              <option value="all">Todos os Dados</option>
-              <option value="today">Hoje</option>
-              <option value="week">Esta Semana</option>
-              <option value="month">Este Mês</option>
-            </select>
-          </div>
-
           <div className={styles.stats}>
             <div className={styles.statCard}>
               <h3 className={styles.statTitle}>Total de Vendas</h3>
@@ -123,7 +114,6 @@ function Dashboard() {
               <p className={styles.statValue}>{totalOrders}</p>
             </div>
             <div className={styles.graphContainer}>
-              <h3 className={styles.graphTitle}>Vendas Mensais</h3>
               <Bar data={data} />
             </div>
           </div>
