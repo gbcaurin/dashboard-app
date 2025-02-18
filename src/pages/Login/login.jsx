@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { auth, signInWithEmailAndPassword } from "../../firebaseConfig";
-import PopUpMsg from "../../components/PopUpMsg/popUpMsg";
+import PopUpMsg from "../../components/PopUpMsg/PopUpMsg";
 import styles from "./login.module.css";
 
 function Login() {
