@@ -56,3 +56,96 @@
   display: flex;
   height: 100vh;
 }
+
+.graphDiv {
+  background-color: var(--card-background);
+  padding: 20px;
+  border-radius: 5px;
+  margin: 1rem auto;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.graphTitle {
+  color: var(--card-text-color);
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 3rem;
+  background-color: var(--button-background);
+  color: var(--text-color);
+  min-height: 100vh;
+  overflow-y: auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contentWithSidebar {
+  transition: margin-left 0.3s ease;
+}
+
+.contentFull {
+  margin-left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .mainContent {
+    padding: 2rem;
+  }
+
+  .graphDiv {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .graphTitle {
+    font-size: 1.25rem;
+  }
+
+  .buttonUnlogged {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .titleUnlogged {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .containerUnlogged {
+    height: auto;
+  }
+
+  .buttonUnlogged {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .graphDiv {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .graphTitle {
+    font-size: 1.1rem;
+  }
+
+  .mainContent {
+    padding: 1.5rem;
+  }
+
+  .titleUnlogged {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}

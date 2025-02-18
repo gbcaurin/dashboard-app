@@ -99,7 +99,7 @@
   padding: 20px;
   border-radius: 5px;
   margin: 1rem;
-  width: 60%;
+  width: 80%;
   color: var(--card-text-color);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -109,8 +109,141 @@
   padding: 20px;
   border-radius: 5px;
   margin: 1rem;
-  width: 60%;
+  width: 80%;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   max-height: 500px;
   overflow: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .mainContent {
+    padding: 2rem;
+  }
+
+  .graphContainer {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .statCard {
+    width: 90%;
+  }
+
+  .stats {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .containerUnlogged {
+    flex-direction: column;
+  }
+
+  .contentWithSidebar {
+    margin-left: 0;
+  }
+
+  .graphTitle {
+    font-size: 1.25rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .mainContent {
+    padding-top: 3rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .graphContainer {
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  .statCard {
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  .stats {
+    margin-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .containerUnlogged {
+    flex-direction: column;
+  }
+
+  .contentWithSidebar {
+    margin-left: 0;
+  }
+
+  .graphTitle {
+    font-size: 1.3rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .mainContent {
+    padding-top: 4rem;
+  }
+
+  .graphContainer {
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  .statCard {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .stats {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .containerUnlogged {
+    flex-direction: column;
+  }
+
+  .contentWithSidebar {
+    margin-left: 0;
+  }
+
+  .graphTitle {
+    font-size: 1.2rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
 }
