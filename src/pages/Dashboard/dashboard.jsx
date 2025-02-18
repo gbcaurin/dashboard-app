@@ -43,12 +43,18 @@ function Dashboard() {
   }, []);
 
   useEffect(() => {
-    const fetchSalesData = async () => {
-      const data = await getSalesData();
-      setSalesData(data);
-    };
+    const storedSalesData = localStorage.getItem("salesData");
 
-    fetchSalesData();
+    if (storedSalesData) {
+      setSalesData(JSON.parse(storedSalesData));
+    } else {
+      const fetchSalesData = async () => {
+        const data = await getSalesData();
+        setSalesData(data);
+        localStorage.setItem("salesData", JSON.stringify(data));
+      };
+      fetchSalesData();
+    }
   }, []);
 
   const totalSales =
