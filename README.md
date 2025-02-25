@@ -41,7 +41,5 @@ Uma empresa pode utilizar este dashboard para analisar suas vendas mensais, cate
 ## Contribuição
 Sinta-se à vontade para contribuir! Crie um fork do repositório, faça suas alterações e envie um pull request.
 
-## Licença
-Este projeto está licenciado sob a [MIT License](LICENSE).
 
 
