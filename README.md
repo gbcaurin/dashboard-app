@@ -35,7 +35,7 @@ Uma empresa pode utilizar este dashboard para analisar suas vendas mensais, cate
    ```
 3. Inicie o projeto:
    ```bash
-   npm start
+   npm run dev
    ```
 
 ## Contribuição
